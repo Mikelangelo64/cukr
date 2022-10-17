@@ -1,0 +1,106 @@
+@mixin text-heading-styles {
+    margin: 0;
+    font-family: $font-family-title;
+    font-weight: 500;
+    line-height: 110%;
+    //text-transform: uppercase;
+}
+
+@mixin text-heading-1 {
+    @include text-heading-styles;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include viewport-desktop {
+        font-size: px-to-rem(28);
+    }
+    @include viewport-tablet {
+        font-size: px-to-rem(20);
+    }
+    @include viewport-phone {
+        font-size: px-to-rem(20);
+    }
+}
+
+@mixin text-heading-2 {
+    @include text-heading-styles;
+    font-weight: 800;
+    line-height: 120%;
+
+    @include viewport-desktop {
+        font-size: px-to-rem(26);
+    }
+    @include viewport-tablet {
+        font-size: px-to-rem(26);
+    }
+    @include viewport-phone {
+        font-size: px-to-rem(26);
+    }
+}
+
+@mixin text-heading-3 {
+    @include text-heading-styles;
+    font-family: $font-family-content;
+    font-weight: 700;
+    line-height: 136%;
+    font-size: px-to-rem(18);
+
+    // @include viewport-desktop {
+    //     font-size: px-to-rem(18);
+    //     line-height: 136%;
+    // }
+    // @include viewport-tablet {
+    //     font-size: px-to-rem(18);
+    // }
+    // @include viewport-phone {
+    //     font-size: px-to-rem(18);
+    // }
+}
+
+@mixin text-heading-1-enrty {
+    @include text-heading-styles;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include viewport-desktop {
+        font-size: px-to-rem(35);
+    }
+    @include viewport-tablet {
+        font-size: px-to-rem(35);
+    }
+    @include viewport-phone {
+        font-size: px-to-rem(25);
+    }
+}
+
+@mixin text-heading-2-enrty {
+    @include text-heading-styles;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include viewport-desktop {
+        font-size: px-to-rem(14);
+    }
+    @include viewport-tablet {
+        font-size: px-to-rem(14);
+    }
+    @include viewport-phone {
+        font-size: px-to-rem(14);
+    }
+}
+
+@mixin text-heading-3-enrty {
+    @include text-heading-styles;
+    font-weight: 900;
+    line-height: 110%;
+
+    @include viewport-desktop {
+        font-size: px-to-rem(26);
+    }
+    @include viewport-tablet {
+        font-size: px-to-rem(26);
+    }
+    @include viewport-phone {
+        font-size: px-to-rem(24);
+    }
+}

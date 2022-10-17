@@ -1,0 +1,219 @@
+@import './config/base.scss';
+
+input,
+textarea {
+    @include form-input;
+}
+
+// form {
+//     div {
+//         color: inherit;
+
+//         span {
+//             @include text-body-1;
+//             display: block;
+//             margin-bottom: 4px;
+//         }
+
+//         strong {
+//             display: flex;
+//             align-items: center;
+//             font-size: px-to-rem(10);
+//             color: var(--color-button);
+
+//             &::before {
+//                 content: '';
+//                 flex: 0 0 px-to-rem(5);
+//                 height: 5px;
+//                 margin-right: px-to-rem(4);
+//                 background-image: url(../assets/img/label-incorrect-input.svg);
+//                 background-size: contain;
+//                 background-repeat: no-repeat;
+//                 background-position: center center;
+//             }
+//         }
+
+//         input,
+//         textarea {
+//             width: 100%;
+//         }
+//     }
+
+//     input {
+//         @include form-input;
+//     }
+//     textarea {
+//         @include form-input;
+//         height: px-to-rem(87);
+//         border: 1px solid var(--color-text-primary);
+//         border-radius: px-to-rem(8);
+//         padding: px-to-rem(10);
+
+//         &::placeholder {
+//             font-size: 0;
+//         }
+//     }
+
+//     button[type=submit],
+//     input[type=submit] {
+//         @include button;
+//         @include button-normal;
+//         border-color: var(--color-text-primary);
+//         color: var(--color-text-primary);
+
+//         &:hover,
+//         &:focus-visible {
+//             background-color: var(--color-text-primary);
+//             color: var(--color-text-secondary);
+//         }
+//     }
+// }
+
+._btn-white {
+    @include button-white;
+}
+
+._btn-black {
+    @include button-black;
+}
+
+section {
+
+    @include viewport-desktop {
+        padding: px-to-rem(60) 0;
+    }
+    @include viewport-tablet {
+        padding: px-to-rem(30) 0;
+    }
+    @include viewport-phone {
+        padding: px-to-rem(30) 0;
+    }
+    
+}
+
+//HEADER
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    padding: px-to-rem(15) 0;
+
+    //.header__container 
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+
+        @include viewport-desktop {
+            max-width: px-to-rem(1170);
+        }
+        @include viewport-tablet {
+            max-width: px-to-rem(970);
+        }
+        @include viewport-phone {
+            max-width: 95.75%;
+        }
+    }
+
+    //.header__wrapper 
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    //.header__logo 
+    &__logo {
+        flex: 0 0 px-to-rem(100);
+        width: 100%;
+
+        .custom-logo-link {
+        }
+    }
+    
+    //.header__additional 
+    &__additional {
+        flex: 0 0 22.222%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.menu-burger {
+    @include viewport-desktop {
+        display: none;
+    }
+}
+
+.menu {
+    @include viewport-desktop {
+        flex: 0 0 59.467%;
+    }
+    //.menu-list 
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+            &._mob {
+                @include viewport-desktop {
+                    display: none;
+                }
+            }
+        }
+
+        //.menu-list__item 
+        &__item {
+            font-family: $font-family-title;
+            font-weight: 700;
+            font-size: px-to-rem(16);
+            color: inherit;
+
+            &._green {
+            }
+            &._white {
+            }
+        }
+    }
+}
+
+.search-open {
+    &._desk {
+    }
+
+    &._mob {
+    }
+}
+
+.socials {
+    
+    //.socials__item 
+    &__item {
+    }
+}
+
+.weather-atlas-wrapper {
+    .weather-atlas-header {
+    }
+    .weather-atlas-body {
+    }
+    .current_temp {
+    }
+    .wi {
+    }
+    .wi-fw {
+    }
+    .wi-weather-27 {
+    }
+    .temp {
+    }
+    .current_text {
+    }
+    .weather-atlas-footer {
+    }
+    .weather-atlas-footer-block {
+    }
+}
