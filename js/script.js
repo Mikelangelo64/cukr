@@ -1,0 +1,43 @@
+$('document').ready(function(){
+    const isMobile = {
+        Android: function(){
+            return navigator.userAgent.match(/Android/i)
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i)
+        },
+        iOS: function(){
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i)
+        },
+        Opera: function(){
+            return navigator.userAgent.match(/Opera mini/i)
+        },
+        Windows: function(){
+            return navigator.userAgent.match(/IEMobile/i)
+        },
+        any: function(){
+            return(
+                isMobile.Android() ||
+                isMobile.BlackBerry() ||
+                isMobile.iOS() ||
+                isMobile.Opera() ||
+                isMobile.Windows()
+            )
+        }
+    }
+
+    if(isMobile.any()){
+        $('body').addClass('_touch')
+
+    }else{
+        $('body').addClass('_pc')
+    }
+
+    //menu open
+    $('.menu-burger').click(function(e){
+        e.preventDefault()
+        $(this).toggleClass('_active')
+        $('.menu').toggleClass('_active')
+        $('body').toggleClass('_lock')
+    })
+})

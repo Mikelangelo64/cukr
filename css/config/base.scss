@@ -87,21 +87,28 @@ body{
 
 @mixin button-white {
     @include button;
-    border-radius: px-to-rem(40);
+    border-radius: unset;
     transition: background 0.3s ease, color 0.3s ease;
     font-size: px-to-rem(16);
     line-height: 130%;
     letter-spacing: px-to-rem(0.5);
     font-weight: 700;
     text-transform: capitalize;
-    padding: px-to-rem(10) px-to-rem(30);
     background-color: var(--color-element-primary);
     color: var(--color-text-primary);
+
+    @include viewport-tablet-min {
+        padding: px-to-rem(10) px-to-rem(30);
+    }
+
+    @include viewport-phone {
+        padding: px-to-rem(20) px-to-rem(45);
+    }
 
     &:hover,
     &:focus-visible {
         background-color: var(--color-bg-secondary);
-        color: var(--color-text-secondary);
+        color: var(--color-text-thirdy);
     }
 }
 
@@ -159,7 +166,11 @@ body{
         max-width: px-to-rem(970);
     }
     @include viewport-phone {
-        max-width: 91.501%;
+        max-width: px-to-rem(750);
+
+        @media (max-width: 768px) {
+            max-width: 91.501%;
+        }
     }
 }
 
