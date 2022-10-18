@@ -87,13 +87,11 @@ body{
 
 @mixin button-white {
     @include button;
-    border-radius: unset;
     transition: background 0.3s ease, color 0.3s ease;
     font-size: px-to-rem(16);
     line-height: 130%;
     letter-spacing: px-to-rem(0.5);
     font-weight: 700;
-    text-transform: capitalize;
     background-color: var(--color-element-primary);
     color: var(--color-text-primary);
 
@@ -116,9 +114,10 @@ body{
     @include button;
     width: 100%;
     font-size: px-to-rem(18);
-    padding: px-to-rem(6) px-to-rem(12);
+    font-weight: 700;
+    padding: px-to-rem(18) px-to-rem(12);
     background-color: var(--color-bg-secondary);
-    color: var(--color-text-secondary);
+    color: var(--color-text-thirdy);
 
     // &:hover,
     // &:focus-visible {
@@ -180,7 +179,7 @@ body{
     width: 100%;
     cursor: pointer;
 
-    &.header {
+    &._header {
         @include viewport-tablet-min {
             max-width: px-to-rem(100);
         }
@@ -189,12 +188,12 @@ body{
         }
     }
 
-    &.footer {
+    &._footer {
         @include viewport-tablet-min {
             max-width: px-to-rem(178);
         }
         @include viewport-phone {
-            max-width: px-to-rem(178);
+            max-width: px-to-rem(300);
         }
     }
 
