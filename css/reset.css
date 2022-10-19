@@ -20,7 +20,7 @@ time, mark, audio, video {
 }
 
 /* make sure to set some focus styles for accessibility */
-:focus {
+:focus-visible {
     outline: 0;
 }
 
@@ -124,8 +124,8 @@ html {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 
-a:focus {
-    outline: thin dotted;
+a:focus-visible {
+    outline: unset;
 }
 
 /**
@@ -330,12 +330,14 @@ textarea {
 
 
 ::-moz-selection {
-    background: #b3d4fc;
+    color: #fff;
+    background: #000;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    color: #fff;
+    background: #000;
     text-shadow: none;
 }
 

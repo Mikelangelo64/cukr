@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     
     <script src="js/script.js" defer></script>
@@ -106,7 +107,7 @@
               </a>
             </li>
             <li class="_mob">
-              <a data-open=".popup-search" href="#" class="search-open _mob">
+              <a data-open=".popup-search" href="#" class="search-open open-popup _mob">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
                   <path d="M19.78125,18.3671875l-3.4696045-3.4696045C17.3656006,13.5424805,18,11.8456421,18,10c0-4.4111328-3.5888672-8-8-8 s-8,3.5888672-8,8s3.5888672,8,8,8c1.8456421,0,3.5424805-0.6343994,4.897583-1.6883545l3.4696045,3.4696045L19.78125,18.3671875z M10,16c-3.3085938,0-6-2.6914062-6-6s2.6914062-6,6-6s6,2.6914062,6,6S13.3085938,16,10,16z"></path>
                 </svg>
@@ -138,7 +139,7 @@
               </a>
             </li>
           </ul>
-          <a data-open=".popup-search" href="#" class="search-open _desk">
+          <a data-open=".popup-search" href="#" class="search-open open-popup _desk">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
               <path d="M19.78125,18.3671875l-3.4696045-3.4696045C17.3656006,13.5424805,18,11.8456421,18,10c0-4.4111328-3.5888672-8-8-8 s-8,3.5888672-8,8s3.5888672,8,8,8c1.8456421,0,3.5424805-0.6343994,4.897583-1.6883545l3.4696045,3.4696045L19.78125,18.3671875z M10,16c-3.3085938,0-6-2.6914062-6-6s2.6914062-6,6-6s6,2.6914062,6,6S13.3085938,16,10,16z"></path>
             </svg>
@@ -169,9 +170,134 @@
         </div>
       </div>
     </div>
+
+    <div class="popup popup-search">
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__label">
+            <img src="./assets/img/label-search.svg" alt="search">
+          </div>
+          <form class="popup__form">
+            <input type="text" name="search" placeholder="Що шукаємо?">
+          </form>
+          <a href="#" class="popup__close">
+            <img src="./assets/img/label-close.svg" alt="close">
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <div class="separate-section">
+  <div class="mob-slider">
+    <div class="_container mob-slider__container">
+      <div class="mob-slider__wrapper">
+        <div class="swiper main-swiper">
+          <div class="main-swiper__btns__container">
+            <button class="swiper-button-next">
+              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.2973 0.908914L6.38855 6L1.2973 11.0911" stroke="white" stroke-linecap="square"/>
+              </svg>            
+            </button>
+            <button class="swiper-button-prev">
+              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.48835 0.908914C4.50009 2.89711 1.39709 6 1.39709 6L6.48835 11.0911" stroke="white" stroke-linecap="square"/>
+              </svg>
+            </button>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="main-swiper__content">
+                <div class="main-swiper__img">
+                  <img src="./assets/img/img-article-1.jpg" alt="article-1">
+                </div>
+
+                <div class="main-swiper__text">
+                  <h3 class="main-swiper__title">
+                    <img class="emoji" src="./assets/img/label-article-list-1.svg" alt="👕">
+                      «Завдання — зробити людину впевненою в собі»: засновники сумського бренду Rozmova про одяг і суперсилу працівників
+                  </h3>
+                  <div class="main-swiper__subtitle">
+                    <p>«Не продаємо одяг, а шукаємо клієнту улюблену річ»</p>
+                  </div>
+                  <p class="main-swiper__tag _white">
+                    Місто
+                  </p>
+                  <p class="main-swiper__tag _black">
+                    Війна
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="main-swiper__content">
+                <div class="main-swiper__img">
+                  <img src="./assets/img/img-article-2.jpg" alt="article-2">
+                </div>
+
+                <div class="main-swiper__text">
+                  <h3 class="main-swiper__title">
+                    <img class="emoji" src="./assets/img/label-article-list-2.svg" alt="💡">
+                    Віялові відключення світла: як вони працюють і для чого потрібні
+                  </h3>
+                  <div class="main-swiper__subtitle">
+                    <p>Якщо не збалансувати ситуацію, трапиться аварія</p>
+                  </div>
+                  <p class="main-swiper__tag _white">
+                    Люди
+                  </p>
+                  <p class="main-swiper__tag _black">
+                    Промо
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee__wrapper">
+      <span class="marquee__title">
+        <img src="./assets/img/label-category-1.svg" alt="🔋">
+        <a href="#">Ц.Зарядка</a>
+      </span>
+      <span class="empty" ></span>
+      <span class="marquee__title">
+        <img src="./assets/img/label-category-2.svg" alt="📰">
+        <a href="#">Друкований журнал</a>
+      </span>
+      <span class="empty" ></span>
+      <span class="marquee__title">
+        <img src="./assets/img/label-category-3.svg" alt="🗓">
+        <a href="#">Афіша</a>
+      </span>
+      <span class="empty" ></span>
+      <span class="marquee__title">
+        <img src="./assets/img/label-category-4.svg" alt="✋">
+        <a href="#">Ц.Робота</a>
+      </span>
+      <span class="empty" ></span>
+      <span class="marquee__title">
+        <img src="./assets/img/label-category-5.svg" alt="🚲">
+        <a href="#">Вело-СТО</a>
+      </span>
+      <span class="empty" ></span>
+      <span class="marquee__title">
+        <img src="./assets/img/label-category-6.svg" alt="📍">
+        <a href="#">Гайд містом</a>
+      </span>
+      <span class="empty" ></span>
+      <span class="marquee__title">
+        <img src="./assets/img/label-category-7.svg" alt="😎">
+        <a href="#">Стікерпак</a>
+      </span>
+      <span></span>
+    </div>
+  </div>
+
+  <div data-is-main="true" class="separate-section first-section">
     <div class="_container separate-section__container">
       <div class="separate-section__wrapper">
         <div class="separate-section__left">
@@ -400,13 +526,18 @@
                 </div>
               </li>
             </ul>
+            <div class="articles__btn__container more__btn__container">
+              <button class="_btn-white articles__btn">
+                Показати більше
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="articles">
+  <div class="articles _desk">
     <div class="_container articles__container">
       <div class="articles__wrapper">
         <ul class="articles-list">
@@ -532,7 +663,7 @@
     </div>
   </div>
 
-  <div data-tag="city" class="articles articles__thematic">
+  <div data-tag="city" class="articles articles__thematic _no-border">
     <div class="_container articles__container">
       <div class="articles__wrapper">
 
@@ -710,6 +841,34 @@
             Показати більше
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sponsors">
+    <div class="_container">
+      <div class="sponsors__wrapper">
+        <div class="sponsors__text">
+          <p>
+            «Цукр» працює завдяки 
+            <a href="#">підтримці читачів</a>
+            та міжнародних організацій:
+          </p>
+        </div>
+        <ul class="sponsors-list">
+          <li class="sponsors-list__item">
+            <img src="./assets/img/img-sponsor-1.png" alt="sponsor-1">
+          </li>
+          <li class="sponsors-list__item">
+            <img src="./assets/img/img-sponsor-2.png" alt="sponsor-2">
+          </li>
+          <li class="sponsors-list__item">
+            <img src="./assets/img/img-sponsor-3.png" alt="sponsor-3">
+          </li>
+          <li class="sponsors-list__item">
+            <img src="./assets/img/img-sponsor-4.png" alt="sponsor-4">
+          </li>
+        </ul>
       </div>
     </div>
   </div>
