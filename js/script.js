@@ -44,13 +44,14 @@ $('document').ready(function(){
     //change margin separate section on the main page
     function removeClass() {
         const isMain = $('.separate-section').attr('data-is-main')
+        console.log(isMain);
 
         if(document.body.clientWidth < 991) {
-            if(isMain) {
+            if(isMain === 'true') {
                 $('.separate-section').removeClass('first-section')
             }
         }else {
-            if(isMain) {
+            if(isMain === 'true') {
                 $('.separate-section').addClass('first-section')
             }
         }
@@ -115,27 +116,9 @@ $('document').ready(function(){
     let nodeMainSwiper = document.querySelector('.swiper.main-swiper')
     let mainSwiper = undefined
 
-    $(window).ready(function(){
-        if (document.documentElement.clientWidth < 991) {
-            mainSwiper = new Swiper(nodeMainSwiper, {
-                navigation: {
-                    nextEl: ".main-swiper__btns__container .swiper-button-next",
-                    prevEl: ".main-swiper__btns__container .swiper-button-prev",
-                },
-                slidesPerView: 1,
-                spaceBetween: 0,
-                loop: true,
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                },
-            })
-        }
-    })
-
-    $(window).resize(function(){
-        if (document.documentElement.clientWidth < 991) {
-            if(mainSwiper === undefined) {
+    if(nodeMainSwiper) {
+        $(window).ready(function(){
+            if (document.documentElement.clientWidth < 991) {
                 mainSwiper = new Swiper(nodeMainSwiper, {
                     navigation: {
                         nextEl: ".main-swiper__btns__container .swiper-button-next",
@@ -150,12 +133,31 @@ $('document').ready(function(){
                     },
                 })
             }
-        } else {
-            if(mainSwiper) {
-                mainSwiper.destroy()
-                mainSwiper = undefined
-            }
-        }
-    })
+        })
     
+        $(window).resize(function(){
+            if (document.documentElement.clientWidth < 991) {
+                if(mainSwiper === undefined) {
+                    mainSwiper = new Swiper(nodeMainSwiper, {
+                        navigation: {
+                            nextEl: ".main-swiper__btns__container .swiper-button-next",
+                            prevEl: ".main-swiper__btns__container .swiper-button-prev",
+                        },
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        loop: true,
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                    })
+                }
+            } else {
+                if(mainSwiper) {
+                    mainSwiper.destroy()
+                    mainSwiper = undefined
+                }
+            }
+        })
+    }
 })
