@@ -100,6 +100,17 @@ $('document').ready(function(){
         })
     }
 
+    //progressbar
+    const progressbar = document.querySelector('.progressbar__inner')
+
+    if(progressbar) {
+        const bodyHeight = document.body.scrollHeight
+        window.addEventListener('scroll', (e) => {
+            const proggress = Math.min(100, window.scrollY / (bodyHeight - window.innerHeight) * 100)
+            progressbar.style.width = proggress + '%'
+        })
+    }
+
     //swipers
     let nodeMainSwiper = document.querySelector('.swiper.main-swiper')
     let mainSwiper = undefined
